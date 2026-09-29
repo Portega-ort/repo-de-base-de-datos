@@ -42,3 +42,4 @@ target/
 ### Archivos locales del IDE ###
 .idea/j2kLlmSettings.xml
 .idea/workspace.xml
+.idea/vcs.xml
