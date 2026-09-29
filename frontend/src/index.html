@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habit Tracker</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <div id="auth-view" class="auth-view hidden">
+    <section class="auth-card">
+      <p class="eyebrow">HABIT TRACKER</p>
+      <h1 id="auth-title">Inicia sesión</h1>
+      <form id="auth-form" novalidate>
+        <div id="auth-campos-registro" class="hidden">
+          <label>Nombre<input name="nombre" type="text" maxlength="80" autocomplete="given-name"></label>
+          <label>Apellido<input name="apellido" type="text" maxlength="80" autocomplete="family-name"></label>
+        </div>
+        <label>Correo electrónico<input name="email" type="email" required autocomplete="email"></label>
+        <label>Contraseña<input name="password" type="password" required minlength="8" autocomplete="current-password"><small class="hint">Mínimo 8 caracteres, con una letra y un número.</small></label>
+        <p id="auth-error" class="form-error" role="alert"></p>
+        <button id="auth-submit" type="submit">Entrar</button>
+        <button id="auth-toggle" type="button" class="quiet">¿No tienes cuenta? Regístrate</button>
+      </form>
+    </section>
+  </div>
+
+  <div id="app-view" class="app-view hidden">
+    <header class="topbar">
+      <a class="brand" href="/"><img src="assets/logo.svg" alt="" width="22" height="22"> Habit Tracker</a>
+      <nav aria-label="Navegación principal">
+        <button type="button" class="nav-link active" data-view="habitos">Hábitos</button>
+        <button type="button" class="nav-link" data-view="progreso">Progreso</button>
+        <button type="button" class="nav-link hidden" data-view="admin" id="nav-admin">Admin</button>
+      </nav>
+      <div class="user-area">
+        <button id="user-name" type="button" title="Mi perfil"></button>
+        <button id="tour-button" type="button" class="quiet">Guía</button>
+        <button id="logout-button" type="button" class="quiet">Salir</button>
+      </div>
+    </header>
+    <main class="page">
+      <section id="view-habitos" class="view"></section>
+      <section id="view-progreso" class="view hidden"></section>
+      <section id="view-perfil" class="view hidden"></section>
+      <section id="view-admin" class="view hidden"></section>
+    </main>
+  </div>
+
+  <div id="dialogo" class="dialogo-backdrop hidden">
+    <div class="dialogo">
+      <h2 id="dialogo-titulo"></h2>
+      <div id="dialogo-contenido"></div>
+    </div>
+  </div>
+
+  <script type="module" src="js/pages/home.js"></script>
+</body>
+</html>

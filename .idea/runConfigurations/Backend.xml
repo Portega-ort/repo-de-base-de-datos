@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Backend" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.retfinalo.Main" />
+    <option name="VM_PARAMETERS" value="--add-modules jdk.httpserver" />
+    <option name="envs">
+      <map>
+        <entry key="DB_URL" value="jdbc:mysql://localhost:3306/habit_tracker_db?useSSL=false&amp;serverTimezone=UTC" />
+        <entry key="DB_USER" value="root" />
+        <entry key="DB_PASSWORD" value="TuNuevaContraseña123" />
+      </map>
+    </option>
+    <module name="RetFinaloBD" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
